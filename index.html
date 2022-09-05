@@ -10,10 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->    
+    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-dark">
@@ -40,7 +39,7 @@
       </div>
     </div>
   </nav>
-  
+
   <main>
     <section id="sobre-mim">
       <div class="container mt-3">
@@ -100,38 +99,16 @@
           <div class="col">
             <h2 class="text-center">Cursos</h2>
             <ul>
-              <li>
-                Excel 2016 - AvançadoExcel 2016 - Avançado</p>
-                Fundação BradescoFundação Bradesco
-                Emitido em fev de 2021 · Sem data de expiração</li></p>
-	      <li>
-	        Fundamentos de lógica de programação Fundamentos de lógica de programação</p>
-	        Fundação BradescoFundação Bradesco</li></p>
-              <li>
-	        Fundamentos de scrumFundamentos de scrum</p>
-	        SCRUMstudy - Accreditation Body for Scrum and AgileSCRUMstudy - Accreditation Body for Scrum and Agile</li></p>
-              <li>
-	        HTML e CSS na Prática HTML e CSS na Prática</p>
-	        Fundação BradescoFundação Bradesco
-	        Emitido em fev de 2021 · Sem data de expiraçãoEmitido em fev de 2021 · Sem data de expiração</li></p>
-              <li>
-	        Introdução a linguagem CSSIntrodução a linguagem CSS</p>
-	        UdemyUdemy</li></p>
-              <li>
-	        Introdução a linguagem HTML Introdução a linguagem HTML</p>
-	        Udemy BrasilUdemy Brasil</li></p>
-              <li>
-	        Introdução aos Testes Automatizados Introdução aos Testes Automatizados</p>
-	        Udemy BrasilUdemy Brasil</li></p>
-              <li>
-	        Linguagem de Programação C# básico Linguagem de Programação C# básico</p>
-	        Fundação BradescoFundação Bradesco</li></p>
-              <li>
-	        Sistemas Operacionais - Conceitos Básicos Sistemas Operacionais - Conceitos Básicos</p>
-	        Fundação BradescoFundação Bradesco</li></p>
-              <li>
-	        Six sigma yellow beltsix sigma yellow belt</p>
-	        6sigmastudy - The global certification body for six sigma certifications6sigmastudy</li></p>
+              <li>Excel 2016 - AvançadoExcel 2016 - Avançado Fundação BradescoFundação Bradesco Emitido em fev de 2021 · Sem data de expiração</li>
+	            <li>Fundamentos de lógica de programação Fundamentos de lógica de programação Fundação BradescoFundação Bradesco</li>
+              <li>Fundamentos de scrumFundamentos de scrum SCRUMstudy - Accreditation Body for Scrum and AgileSCRUMstudy - Accreditation Body for Scrum and Agile</li>
+              <li>HTML e CSS na Prática HTML e CSS na Prática Fundação BradescoFundação Bradesco Emitido em fev de 2021 · Sem data de expiraçãoEmitido em fev de 2021 · Sem data de expiração</li>
+              <li> Introdução a linguagem CSSIntrodução a linguagem CSS - Udemy</li>
+              <li>Introdução a linguagem HTML Introdução a linguagem HTML Udemy BrasilUdemy Brasil</li>
+              <li> Introdução aos Testes Automatizados Introdução aos Testes Automatizados Udemy BrasilUdemy Brasil</li>
+              <li> Linguagem de Programação C# básico Linguagem de Programação C# básico Fundação BradescoFundação Bradesco</li>
+              <li>Sistemas Operacionais - Conceitos Básicos Sistemas Operacionais - Conceitos Básicos Fundação BradescoFundação Bradesco</li>
+              <li>Six sigma yellow beltsix sigma yellow belt 6sigmastudy - The global certification body for six sigma certifications6sigmastudy</li>
             </ul>
           </div>
         </div>
@@ -145,18 +122,19 @@
             <h2 class="text-center">Contato</h2>
           </div>
         </div>
-        <form class="card card-body">
+        <form class="card card-body" method="post" id="forms" name="dados" onSubmit="return enviardados();">
           <div class="mb-3">
-            <label for="name" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name">
+            <label for="tx_nome" class="form-label">Nome</label>
+            <input name="tx_nome" type="text" class="form-control formbutton" id="tx_nome" size="52" maxlength="150">
+
           </div>
           <div class="mb-3">
-            <label for="phone" class="form-label">Telefone</label>
-            <input type="password" class="form-control" id="phone">
+            <label for="tx_email" class="form-label">Email</label>
+            <input name="tx_email" type="text" id="tx_email" size="52" maxlength="150" class="form-control formbutton">
           </div>
           <div class="mb-3 form-floating">
-            <label for="message" class="form-label">Deixe sua mensagem</label>
-            <textarea name="message" id="message" cols="30" rows="10" class="form-control" ></textarea>
+            <label for="tx_mensagem" class="form-label">Deixe sua mensagem</label>
+            <textarea name="tx_mensagem" cols="50" rows="8" class="form-control formbutton h-100" id="tx_mensagem" input ></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -186,5 +164,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
